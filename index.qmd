@@ -8,14 +8,15 @@ toc: false
 
 # Ryan T. Dobson
 
-Ph.D. Student in Evolution and Society 
+Ph.D. Student, Evolution and Society area
+
 University of New Mexico, Department of Psychology
 
 ::: {.profile-links}
 [CV](files/Ryan_Dobson_CV_march15_2026.pdf)
 [Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
 [GitHub](https://github.com/ryandobson)
-[Linkedin](www.linkedin.com/in/ryan-dobson-2022abc)
+[Linkedin](https://www.linkedin.com/in/ryan-dobson-2022abc)
 [Email](mailto:rdobson@unm.edu)
 :::
 
