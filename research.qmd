@@ -1,5 +1,7 @@
 ---
-title: ""
+title-block: false
+toc: false
+format: html
 ---
 
 # Research

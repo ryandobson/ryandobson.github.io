@@ -1,6 +1,6 @@
 ---
-title: "Code"
-author: "Ryan Dobson"
+title-block: false
+toc: false
 format: html
 ---
 ### codechest
