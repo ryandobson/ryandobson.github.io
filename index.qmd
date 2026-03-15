@@ -1,5 +1,6 @@
 ---
 title: "Home"
+title-block-style: none
 toc: false
 ---
 
@@ -10,14 +11,13 @@ toc: false
 Ph.D. Student in Evolution and Society 
 University of New Mexico, Department of Psychology
 
-
+::: {.profile-links}
 [CV](files/Ryan_Dobson_CV_march15_2026.pdf)
 [Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
-[LinkedIn]
-[GitHub](https:/github.com/ryandobson)
+[GitHub](https://github.com/ryandobson)
 [Linkedin](www.linkedin.com/in/ryan-dobson-2022abc)
 [Email](mailto:rdobson@unm.edu)
-
+:::
 
 ## Research Interests
 
