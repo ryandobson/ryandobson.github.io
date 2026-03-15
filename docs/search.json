@@ -53,6 +53,6 @@
     "href": "index.html#code",
     "title": "Home",
     "section": "Code",
-    "text": "Code\nMuch of my work involves statistical modeling, data cleaning, and reproducible research workflows in R (and sometimes Python).\ncodechest, an R package I am slowly developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.\nMore examples of my code and research tools can be found on the Code page."
+    "text": "Code\nMuch of my work involves statistical modeling, data cleaning, and reproducible research workflows in R (and sometimes Python).\nAfter many long and painful hours of coding, I decide to start to moving reusable functions into an R package stored on Github. codechest is my personal R package with many convenience functions.\nI can’t promise all of the functions work perfectly, but some of them may be useful to others. More details on the Code page."
   }
 ]

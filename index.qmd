@@ -41,13 +41,15 @@ I am broadly interested in integrating multiple methodological approaches—incl
 
 ## Research 
 
+
+
 More information about my current research projects and publications can be found on the [Research page](research.qmd).
 
 ## Code
 
 Much of my work involves statistical modeling, data cleaning, and reproducible research workflows in R (and sometimes Python). 
 
-**codechest**, an R package I am slowly developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.
+After many long and painful hours of coding, I decide to start to moving reusable functions into an R package stored on Github. **codechest** is my personal R package with many convenience functions. 
 
-More examples of my code and research tools can be found on the [Code page](code.qmd).
+I can't promise all of the functions work perfectly, but some of them may be useful to others. More details on the [Code page](code.qmd).
 
