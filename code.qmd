@@ -17,6 +17,15 @@ The code is still evolving and includes some quirks and idiosyncrasies that refl
 Repository:  
 https://github.com/ryandobson/codechest
 
+#### Install the package
+
+You can install the development version of **codechest** from GitHub using:
+
+```r
+install.packages("remotes")
+remotes::install_github("ryandobson/codechest")
+```
+
 
 ### Example functions
 

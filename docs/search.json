@@ -4,14 +4,14 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "My research focuses on understanding human relationships and sexual behavior from an evolutionary and behavioral genetics perspective.\n\n\n\n\nUnderstanding the evolutionary and psychological dynamics of platonic cross-sex relationships.\n\n\n\nInvestigating how family environments influence sexual development and mating strategies."
+    "text": "My research focuses on understanding human relationships and sexual behavior from an evolutionary and behavioral genetics perspective.\n\n\n\n\nInvestigating how family environments influence sexual development and mating strategies."
   },
   {
-    "objectID": "research.html#current-topics",
-    "href": "research.html#current-topics",
+    "objectID": "research.html#research-projects-in-progress",
+    "href": "research.html#research-projects-in-progress",
     "title": "Research",
     "section": "",
-    "text": "Understanding the evolutionary and psychological dynamics of platonic cross-sex relationships.\n\n\n\nInvestigating how family environments influence sexual development and mating strategies."
+    "text": "Investigating how family environments influence sexual development and mating strategies."
   },
   {
     "objectID": "cv.html",
@@ -25,7 +25,7 @@
     "href": "code.html",
     "title": "Code",
     "section": "",
-    "text": "Code\n\ncodechest\ncodechest is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.\nThe package is therefore best thought of as a personal toolbox of reusable functions for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.\nThe code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.\nRepository:\nhttps://github.com/ryandobson/codechest\n\n\nExample functions\n\nbuild_formula()\nBuilds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.\nrun_models()\nTakes a list of model specifications and fits them in sequence, using lm() for simpler models and lmer() when random effects are present.\nformat_sem_fit_word()\nTurns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup."
+    "text": "Code\n\ncodechest\ncodechest is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.\nThe package is therefore best thought of as a personal toolbox of reusable functions for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.\nThe code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.\nRepository:\nhttps://github.com/ryandobson/codechest\n\nInstall the package\nYou can install the development version of codechest from GitHub using:\ninstall.packages(\"remotes\")\nremotes::install_github(\"ryandobson/codechest\")\n\n\n\nExample functions\n\nbuild_formula()\nBuilds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.\nrun_models()\nTakes a list of model specifications and fits them in sequence, using lm() for simpler models and lmer() when random effects are present.\nformat_sem_fit_word()\nTurns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup."
   },
   {
     "objectID": "index.html",
