@@ -13,7 +13,17 @@ website:
       - href: cv.qmd
         text: CV
 
+  page-footer:
+    background: light
+    left: "© 2026 Ryan Dobson"
+    right:
+      - icon: github
+        href: https://github.com/ryandobson
+      - icon: envelope
+        href: mailto:rdobson@unm.edu
+
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
