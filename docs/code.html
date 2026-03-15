@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ryan Dobson">
 
-<title>Home – Ryan Dobson</title>
+<title>Code – Ryan Dobson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -101,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html"> 
+    <a class="nav-link active" href="./code.html" aria-current="page"> 
 <span class="menu-text">Code</span></a>
   </li>  
   <li class="nav-item">
@@ -119,19 +120,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#codechest" id="toc-codechest" class="nav-link active" data-scroll-target="#codechest">codechest</a></li>
+  <li><a href="#example-functions" id="toc-example-functions" class="nav-link" data-scroll-target="#example-functions">Example functions</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Home</h1>
+<h1 class="title">Code</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ryan Dobson </p>
+          </div>
+  </div>
     
   
     
@@ -142,35 +158,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><img src="files/images/unm_free_personal_headshot.jpg" class="profile-photo img-fluid"></p>
-</div><div class="column" style="width:65%;">
-<section id="ryan-t.-dobson" class="level1">
-<h1>Ryan T. Dobson</h1>
-<p>Ph.D.&nbsp;Student, Evolution and Society Area<br>
-Department of Psychology<br>
-University of New Mexico</p>
-<div class="profile-links">
-<p><a href="files/Ryan_Dobson_CV_march15_2026.pdf">CV</a> <a href="https://scholar.google.com/citations?user=y7DOvyMAAAAJ&amp;hl=en">Google Scholar</a> <a href="https://github.com/ryandobson">GitHub</a> <a href="https://www.linkedin.com/in/ryan-dobson-2022abc">LinkedIn</a> <a href="mailto:rdobson@unm.edu">Email</a></p>
-</div>
+<section id="codechest" class="level3">
+<h3 class="anchored" data-anchor-id="codechest">codechest</h3>
+<p><strong>codechest</strong> is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.</p>
+<p>The package is therefore best thought of as a <strong>personal toolbox of reusable functions</strong> for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.</p>
+<p>The code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.</p>
+<p>Repository:<br>
+https://github.com/ryandobson/codechest</p>
 </section>
-</div>
-</div>
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about">About</h2>
-<p>I am a Ph.D.&nbsp;student in the Evolution and Society area of the Department of Psychology at the University of New Mexico. My research focuses on the evolutionary and developmental foundations of human social relationships and sexual behavior. Much of my work examines cross-sex friendships, relationship dynamics, and the developmental pathways that shape variation in sexual behavior.</p>
-<p>I am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior.</p>
-</section>
-<section id="research" class="level2">
-<h2 class="anchored" data-anchor-id="research">Research</h2>
-<p>More information about my current research projects and publications can be found on the <a href="./research.html">Research page</a>.</p>
-</section>
-<section id="code" class="level2">
-<h2 class="anchored" data-anchor-id="code">Code</h2>
-<p>Much of my work involves statistical modeling, data cleaning, and reproducible research workflows in R and Python. I maintain analysis code and research tools on GitHub.</p>
-<p>One example is <strong>codechest</strong>, an R package I am developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.</p>
-<p>More examples of my code and research tools can be found on the <a href="./code.html">Code page</a>.</p>
+<section id="example-functions" class="level3">
+<h3 class="anchored" data-anchor-id="example-functions">Example functions</h3>
+<ul>
+<li><p><strong><code>build_formula()</code></strong><br>
+Builds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.</p></li>
+<li><p><strong><code>run_models()</code></strong><br>
+Takes a list of model specifications and fits them in sequence, using <code>lm()</code> for simpler models and <code>lmer()</code> when random effects are present.</p></li>
+<li><p><strong><code>format_sem_fit_word()</code></strong><br>
+Turns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup.</p></li>
+</ul>
 
 
 </section>

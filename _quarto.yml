@@ -10,6 +10,8 @@ website:
         text: Home
       - href: research.qmd
         text: Research
+      - href: code.qmd
+        text: Code
       - href: cv.qmd
         text: CV
 

@@ -21,10 +21,10 @@ Department of Psychology
 University of New Mexico
 
 ::: {.profile-links}
-[CV](files/Ryan_Dobson_CV_march15_2026.pdf)  
-[Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)  
-[GitHub](https://github.com/ryandobson)  
-[LinkedIn](https://www.linkedin.com/in/ryan-dobson-2022abc)  
+[CV](files/Ryan_Dobson_CV_march15_2026.pdf)
+[Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
+[GitHub](https://github.com/ryandobson)
+[LinkedIn](https://www.linkedin.com/in/ryan-dobson-2022abc)
 [Email](mailto:rdobson@unm.edu)
 :::
 
@@ -32,10 +32,21 @@ University of New Mexico
 
 ::::
 
-## Research Interests
+## About
 
-- Cross-sex friendships  
-- Sexual behavior and relationships  
-- Behavioral genetics  
-- Evolutionary psychology  
-- Longitudinal research methods
+I am a Ph.D. student in the Evolution and Society area of the Department of Psychology at the University of New Mexico. My research focuses on the evolutionary and developmental foundations of human social relationships and sexual behavior. Much of my work examines cross-sex friendships, relationship dynamics, and the developmental pathways that shape variation in sexual behavior.
+
+I am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior.
+
+## Research 
+
+More information about my current research projects and publications can be found on the [Research page](research.qmd).
+
+## Code
+
+Much of my work involves statistical modeling, data cleaning, and reproducible research workflows in R and Python. I maintain analysis code and research tools on GitHub.
+
+One example is **codechest**, an R package I am developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.
+
+More examples of my code and research tools can be found on the [Code page](code.qmd).
+

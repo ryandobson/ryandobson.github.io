@@ -76,3 +76,14 @@ section {
   padding-left: 12px;
   margin-bottom: 20px;
 }
+
+.profile-links a::after {
+  content: "•";
+  margin-left: 10px;
+  margin-right: 2px;
+  color: #999;
+}
+
+.profile-links a:last-child::after {
+  content: "";
+}
