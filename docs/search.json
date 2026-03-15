@@ -23,36 +23,36 @@
   {
     "objectID": "code.html",
     "href": "code.html",
-    "title": "Ryan Dobson",
+    "title": "Code",
     "section": "",
-    "text": "codechest\ncodechest is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.\nThe package is therefore best thought of as a personal toolbox of reusable functions for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.\nThe code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.\nRepository:\nhttps://github.com/ryandobson/codechest\n\n\nExample functions\n\nbuild_formula()\nBuilds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.\nrun_models()\nTakes a list of model specifications and fits them in sequence, using lm() for simpler models and lmer() when random effects are present.\nformat_sem_fit_word()\nTurns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup."
+    "text": "Code\n\ncodechest\ncodechest is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.\nThe package is therefore best thought of as a personal toolbox of reusable functions for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.\nThe code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.\nRepository:\nhttps://github.com/ryandobson/codechest\n\n\nExample functions\n\nbuild_formula()\nBuilds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.\nrun_models()\nTakes a list of model specifications and fits them in sequence, using lm() for simpler models and lmer() when random effects are present.\nformat_sem_fit_word()\nTurns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Ryan T. Dobson",
     "section": "",
-    "text": "Ph.D. Student, Evolution and Society Area\nDepartment of Psychology\nUniversity of New Mexico\n\nCV Google Scholar GitHub LinkedIn Email"
+    "text": "Ph.D. Student, Evolution and Society Area\nDepartment of Psychology\nUniversity of New Mexico\n\nCV Google Scholar GitHub LinkedIn Email\n\n\n\n\n\n\nI am a Ph.D. student in the Evolution and Society area of the Department of Psychology at the University of New Mexico. My research focuses on the evolutionary and developmental foundations of human social relationships and sexual behavior. Much of my work examines cross-sex friendships, relationship dynamics, and the developmental pathways that shape variation in sexual behavior.\nI am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior.\n\n\n\nMore information about my current research projects and publications can be found on the Research page.\n\n\n\nMuch of my work involves statistical modeling, data cleaning, and reproducible research workflows in R (and sometimes Python).\ncodechest, an R package I am slowly developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.\nMore examples of my code and research tools can be found on the Code page."
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
     "title": "Ryan T. Dobson",
-    "section": "About",
-    "text": "About\nI am a Ph.D. student in the Evolution and Society area of the Department of Psychology at the University of New Mexico. My research focuses on the evolutionary and developmental foundations of human social relationships and sexual behavior. Much of my work examines cross-sex friendships, relationship dynamics, and the developmental pathways that shape variation in sexual behavior.\nI am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior."
+    "section": "",
+    "text": "I am a Ph.D. student in the Evolution and Society area of the Department of Psychology at the University of New Mexico. My research focuses on the evolutionary and developmental foundations of human social relationships and sexual behavior. Much of my work examines cross-sex friendships, relationship dynamics, and the developmental pathways that shape variation in sexual behavior.\nI am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior."
   },
   {
     "objectID": "index.html#research",
     "href": "index.html#research",
     "title": "Ryan T. Dobson",
-    "section": "Research",
-    "text": "Research\nMore information about my current research projects and publications can be found on the Research page."
+    "section": "",
+    "text": "More information about my current research projects and publications can be found on the Research page."
   },
   {
     "objectID": "index.html#code",
     "href": "index.html#code",
     "title": "Ryan T. Dobson",
-    "section": "Code",
-    "text": "Code\nMuch of my work involves statistical modeling, data cleaning, and reproducible research workflows in R and Python. I maintain analysis code and research tools on GitHub.\nOne example is codechest, an R package I am developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.\nMore examples of my code and research tools can be found on the Code page."
+    "section": "",
+    "text": "Much of my work involves statistical modeling, data cleaning, and reproducible research workflows in R (and sometimes Python).\ncodechest, an R package I am slowly developing to organize reusable functions and workflows for data cleaning, statistical modeling, and research pipelines.\nMore examples of my code and research tools can be found on the Code page."
   }
 ]

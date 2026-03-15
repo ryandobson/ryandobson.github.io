@@ -3,6 +3,9 @@ title-block: false
 toc: false
 format: html
 ---
+
+# Code
+
 ### codechest
 
 **codechest** is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.
