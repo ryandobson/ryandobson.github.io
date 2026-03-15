@@ -1,29 +1,41 @@
 ---
 title: "Home"
-title-block-style: none
+title-block: false
 toc: false
 ---
 
+:::: {.columns}
+
+::: {.column width="35%"}
+
 ![](files/images/unm_free_personal_headshot.jpg){.profile-photo}
+
+:::
+
+::: {.column width="65%"}
 
 # Ryan T. Dobson
 
-Ph.D. Student, Evolution and Society area
-
-University of New Mexico, Department of Psychology
+Ph.D. Student, Evolution and Society Area  
+Department of Psychology  
+University of New Mexico
 
 ::: {.profile-links}
-[CV](files/Ryan_Dobson_CV_march15_2026.pdf)
-[Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
-[GitHub](https://github.com/ryandobson)
-[Linkedin](https://www.linkedin.com/in/ryan-dobson-2022abc)
+[CV](files/Ryan_Dobson_CV_march15_2026.pdf)  
+[Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)  
+[GitHub](https://github.com/ryandobson)  
+[LinkedIn](https://www.linkedin.com/in/ryan-dobson-2022abc)  
 [Email](mailto:rdobson@unm.edu)
 :::
 
+:::
+
+::::
+
 ## Research Interests
 
-- Cross-sex friendships
-- Sexual behavior and relationships
-- Behavioral genetics
-- Evolutionary psychology
+- Cross-sex friendships  
+- Sexual behavior and relationships  
+- Behavioral genetics  
+- Evolutionary psychology  
 - Longitudinal research methods
