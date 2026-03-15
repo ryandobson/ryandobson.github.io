@@ -3,13 +3,25 @@ title: "Home"
 toc: false
 ---
 
-# Ryan Dobson
+![](files/images/unm_free_personal_headshot.jpg){.profile-photo}
 
-I am a Ph.D. student in Evolutionary Psychology at the University of New Mexico.
+# Ryan T. Dobson
+
+Ph.D. Student in Evolution and Society 
+University of New Mexico, Department of Psychology
+
+
+[CV](files/Ryan_Dobson_CV_march15_2026.pdf)
+[Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
+[LinkedIn]
+[GitHub](https:/github.com/ryandobson)
+[Linkedin](www.linkedin.com/in/ryan-dobson-2022abc)
+[Email](mailto:rdobson@unm.edu)
+
 
 ## Research Interests
 
-- Opposite-sex friendships
+- Cross-sex friendships
 - Sexual behavior and relationships
 - Behavioral genetics
 - Evolutionary psychology
