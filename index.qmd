@@ -39,17 +39,11 @@ I am a Ph.D. student in the Evolution and Society area of the Department of Psyc
 
 I am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior.
 
-## Research 
+## Explore
 
+You can find more information about my work elsewhere on this site:
 
-
-More information about my current research projects and publications can be found on the [Research page](research.qmd).
-
-## Code
-
-Much of my work involves statistical modeling, data cleaning, and reproducible research workflows in R (and sometimes Python). 
-
-After many long and painful hours of coding, I decide to start to moving reusable functions into an R package stored on Github. **codechest** is my personal R package with many convenience functions. 
-
-I can't promise all of the functions work perfectly, but some of them may be useful to others. More details on the [Code page](code.qmd).
+- [Research](research.qmd) – publications and ongoing projects  
+- [Unpublished Analyses](unpublished_analyses.qmd) – exploratory analyses and research notes  
+- [Code](code.qmd) – statistical tools and my R package *codechest*
 

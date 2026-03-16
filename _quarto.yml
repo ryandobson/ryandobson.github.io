@@ -8,9 +8,9 @@ website:
     left:
       - href: index.qmd
       - href: research.qmd
+      - href: unpublished_analyses.qmd
       - href: code.qmd
       - href: cv.qmd
-      - href: unpublished_analyses.qmd
 
   page-footer:
     background: light
