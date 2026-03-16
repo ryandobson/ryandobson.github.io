@@ -87,3 +87,20 @@ section {
 .profile-links a:last-child::after {
   content: "";
 }
+
+.function-card {
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background-color: #fafafa;
+}
+
+.function-card h3 {
+  margin-top: 0;
+}
+
+.function-card code {
+  font-size: 0.95em;
+}

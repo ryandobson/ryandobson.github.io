@@ -6,7 +6,7 @@ format: html
 
 # Code
 
-### codechest
+## codechest
 
 **codechest** is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.
 
@@ -14,8 +14,7 @@ The package is therefore best thought of as a **personal toolbox of reusable fun
 
 The code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.
 
-Repository:  
-https://github.com/ryandobson/codechest
+Repository: [github.com/ryandobson/codechest](https://github.com/ryandobson/codechest)
 
 #### Install the package
 
@@ -27,14 +26,74 @@ remotes::install_github("ryandobson/codechest")
 ```
 
 
-### Example functions
+```{r}
+#| label: setup
+#| include: false
 
-- **`build_formula()`**  
-  Builds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.
+library(codechest)
 
-- **`run_models()`**  
-  Takes a list of model specifications and fits them in sequence, using `lm()` for simpler models and `lmer()` when random effects are present.
+ll <- codechest::fivelovelanguages
 
 
-- **`format_sem_fit_word()`**  
-  Turns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup.
+# nice_names <- c(
+#   
+# )
+
+
+
+```
+
+
+## Example functions
+
+::: {.function-card}
+
+### pub_cors_all()
+
+`pub_cors_all()` quickly generates a publication-ready correlation table for a set of variables.
+
+
+```{r}
+
+#grab specific variable names as a vector
+ll_aos <- names(ll[, grepl("rec_aos", colnames(ll))])
+
+#create a vector to display names nicely (optional)
+nice_names <- c(
+  "oral sex"        = "rec_aos_pt_1",
+  "pleasing sexual" = "rec_aos_pt_2"
+)
+
+pub_cors_all(data       = ll, #dataset 
+             cor_vars   = ll_aos,  #vector of variabl names from the dataset to include in analysis
+             rename_vec = nice_names, #named vector to map new variable names
+             cor_use    = "pairwise", #defaults to "pairwise" deletion of cases
+             rnd        = 2 #default rounds to 2
+             )
+
+
+
+```
+
+
+`pub_cors_by()` is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.
+
+I have updates to this function that I haven't incorporated into my package yet which includes:
+- automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)
+
+
+
+```{r}
+
+pub_cors_by(data        = ll, #dataset 
+            cor_vars    = ll_aos,  #vector of variabl names from the dataset to include in analysis
+            group_var   = "sex_bio",
+            groups      = levels(ll$sex_bio),
+            rename_vec  = nice_names, #named vector to map new variable names
+            cor_use     = "pairwise", #defaults to "pairwise" deletion of cases
+            rnd         = 2 #default rounds to 2
+             )
+
+
+```
+

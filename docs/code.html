@@ -163,13 +163,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="code" class="level1">
 <h1>Code</h1>
-<section id="codechest" class="level3">
-<h3 class="anchored" data-anchor-id="codechest">codechest</h3>
+<section id="codechest" class="level2">
+<h2 class="anchored" data-anchor-id="codechest">codechest</h2>
 <p><strong>codechest</strong> is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.</p>
 <p>The package is therefore best thought of as a <strong>personal toolbox of reusable functions</strong> for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.</p>
 <p>The code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.</p>
-<p>Repository:<br>
-https://github.com/ryandobson/codechest</p>
+<p>Repository: <a href="https://github.com/ryandobson/codechest">github.com/ryandobson/codechest</a></p>
 <section id="install-the-package" class="level4">
 <h4 class="anchored" data-anchor-id="install-the-package">Install the package</h4>
 <p>You can install the development version of <strong>codechest</strong> from GitHub using:</p>
@@ -177,18 +176,69 @@ https://github.com/ryandobson/codechest</p>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"ryandobson/codechest"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="example-functions" class="level3">
-<h3 class="anchored" data-anchor-id="example-functions">Example functions</h3>
-<ul>
-<li><p><strong><code>build_formula()</code></strong><br>
-Builds model formulas from specified dependent variables, fixed effects, and optional random effects. I use this when I want to generate many related models without manually rewriting formulas each time.</p></li>
-<li><p><strong><code>run_models()</code></strong><br>
-Takes a list of model specifications and fits them in sequence, using <code>lm()</code> for simpler models and <code>lmer()</code> when random effects are present.</p></li>
-<li><p><strong><code>format_sem_fit_word()</code></strong><br>
-Turns model-fit output into a single formatted string that can be dropped directly into an APA-style writeup.</p></li>
-</ul>
+<section id="example-functions" class="level2">
+<h2 class="anchored" data-anchor-id="example-functions">Example functions</h2>
+<section id="pub_cors_all" class="level3 function-card">
+<h3 class="anchored" data-anchor-id="pub_cors_all">pub_cors_all()</h3>
+<p><code>pub_cors_all()</code> quickly generates a publication-ready correlation table for a set of variables.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#grab specific variable names as a vector</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ll_aos <span class="ot">&lt;-</span> <span class="fu">names</span>(ll[, <span class="fu">grepl</span>(<span class="st">"rec_aos"</span>, <span class="fu">colnames</span>(ll))])</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#create a vector to display names nicely (optional)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>nice_names <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"oral sex"</span>        <span class="ot">=</span> <span class="st">"rec_aos_pt_1"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pleasing sexual"</span> <span class="ot">=</span> <span class="st">"rec_aos_pt_2"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_all</span>(<span class="at">data       =</span> ll, <span class="co">#dataset </span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">cor_vars   =</span> ll_aos,  <span class="co">#vector of variabl names from the dataset to include in analysis</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">rename_vec =</span> nice_names, <span class="co">#named vector to map new variable names</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">cor_use    =</span> <span class="st">"pairwise"</span>, <span class="co">#defaults to "pairwise" deletion of cases</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>             <span class="at">rnd        =</span> <span class="dv">2</span> <span class="co">#default rounds to 2</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>             )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       1     2    3     4    5    6    7    8
+oral sex (1)        1.00  0.71 0.23  0.01 0.01 0.07 0.04 0.01
+pleasing sexual (2) 0.71  1.00 0.27 -0.02 0.02 0.06 0.02 0.05
+rec_aos_pt_3 (3)    0.23  0.27 1.00  0.29 0.27 0.27 0.27 0.24
+rec_aos_1 (4)       0.01 -0.02 0.29  1.00 0.46 0.37 0.39 0.32
+rec_aos_2 (5)       0.01  0.02 0.27  0.46 1.00 0.36 0.38 0.33
+rec_aos_3 (6)       0.07  0.06 0.27  0.37 0.36 1.00 0.61 0.47
+rec_aos_4 (7)       0.04  0.02 0.27  0.39 0.38 0.61 1.00 0.57
+rec_aos_5 (8)       0.01  0.05 0.24  0.32 0.33 0.47 0.57 1.00</code></pre>
+</div>
+</div>
+<p><code>pub_cors_by()</code> is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.</p>
+<p>I have updates to this function that I haven’t incorporated into my package yet which includes: - automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_by</span>(<span class="at">data        =</span> ll, <span class="co">#dataset </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">cor_vars    =</span> ll_aos,  <span class="co">#vector of variabl names from the dataset to include in analysis</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">group_var   =</span> <span class="st">"sex_bio"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">groups      =</span> <span class="fu">levels</span>(ll<span class="sc">$</span>sex_bio),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">rename_vec  =</span> nice_names, <span class="co">#named vector to map new variable names</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">cor_use     =</span> <span class="st">"pairwise"</span>, <span class="co">#defaults to "pairwise" deletion of cases</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">rnd         =</span> <span class="dv">2</span> <span class="co">#default rounds to 2</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>             )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       1    2    3    4    5    6    7    8
+oral sex (1)        1.00 0.73 0.32 0.13 0.12 0.18 0.16 0.07
+pleasing sexual (2) 0.64 1.00 0.35 0.11 0.11 0.15 0.18 0.15
+rec_aos_pt_3 (3)    0.24 0.31 1.00 0.28 0.26 0.24 0.29 0.17
+rec_aos_1 (4)       0.08 0.06 0.24 1.00 0.44 0.37 0.38 0.29
+rec_aos_2 (5)       0.08 0.11 0.22 0.36 1.00 0.33 0.35 0.32
+rec_aos_3 (6)       0.14 0.14 0.25 0.24 0.29 1.00 0.56 0.42
+rec_aos_4 (7)       0.08 0.02 0.21 0.30 0.31 0.61 1.00 0.51
+rec_aos_5 (8)       0.08 0.10 0.26 0.25 0.25 0.46 0.57 1.00
+attr(,"note")
+[1] "Upper triangle = Male, Lower triangle = Female"
+attr(,"class")
+[1] "pub_cors_mat" "matrix"       "array"       </code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
