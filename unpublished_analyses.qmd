@@ -1,0 +1,31 @@
+---
+title-block: false
+toc: false
+format: html
+---
+# Unpublished Analyses
+
+Many research projects generate analyses that are interesting but ultimately do not make their way into a formal publication. This page collects some of those exploratory analyses.
+
+Over time, I will add brief write-ups and data explorations that may be of interest to others working on related topics. These posts will generally be written in a more informal and exploratory style than a traditional research paper.
+
+If you are interested in (a) using any of these ideas or datasets for a paper, or (b) conducting a study related to something discussed here, feel free to reach out: rdobson@unm.edu.
+
+## Five Love Languages
+
+My master's thesis project examined the psychometric structure of Gary Chapman’s *Five Love Languages*. The project was designed primarily as a way to gain hands-on experience with exploratory and confirmatory factor analysis, and it served that purpose well.
+
+While the main thesis focused on the core factor structure questions, the dataset allows for a number of additional analyses that were not included in the final project and will likely never appear in a formal publication.
+
+Some of the exploratory questions I have examined include:
+
+- Do people rate one love language consistently higher than the others?
+- Are there sex differences in the love language factors?
+- Which love languages tend to be rated highest and lowest across participants?
+
+When time allows, I will post some of these analyses here.
+
+
+
+
+

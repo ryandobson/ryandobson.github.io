@@ -27,18 +27,11 @@ remotes::install_github("ryandobson/codechest")
 
 
 ```{r}
-#| label: setup
 #| include: false
 
 library(codechest)
 
 ll <- codechest::fivelovelanguages
-
-
-# nice_names <- c(
-#   
-# )
-
 
 
 ```
@@ -71,20 +64,21 @@ pub_cors_all(data       = ll, #dataset
              rnd        = 2 #default rounds to 2
              )
 
-
-
 ```
+
+
+### pub_cors_by()
 
 
 `pub_cors_by()` is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.
 
 I have updates to this function that I haven't incorporated into my package yet which includes:
+
 - automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)
 
 
 
 ```{r}
-
 pub_cors_by(data        = ll, #dataset 
             cor_vars    = ll_aos,  #vector of variabl names from the dataset to include in analysis
             group_var   = "sex_bio",
@@ -93,7 +87,6 @@ pub_cors_by(data        = ll, #dataset
             cor_use     = "pairwise", #defaults to "pairwise" deletion of cases
             rnd         = 2 #default rounds to 2
              )
-
 
 ```
 

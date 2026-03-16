@@ -143,6 +143,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./unpublished_analyses.html"> 
+<span class="menu-text">Unpublished Analyses</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -178,7 +182,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="example-functions" class="level2">
 <h2 class="anchored" data-anchor-id="example-functions">Example functions</h2>
-<section id="pub_cors_all" class="level3 function-card">
+<div class="function-card">
+<section id="pub_cors_all" class="level3">
 <h3 class="anchored" data-anchor-id="pub_cors_all">pub_cors_all()</h3>
 <p><code>pub_cors_all()</code> quickly generates a publication-ready correlation table for a set of variables.</p>
 <div class="cell">
@@ -209,8 +214,14 @@ rec_aos_4 (7)       0.04  0.02 0.27  0.39 0.38 0.61 1.00 0.57
 rec_aos_5 (8)       0.01  0.05 0.24  0.32 0.33 0.47 0.57 1.00</code></pre>
 </div>
 </div>
+</section>
+<section id="pub_cors_by" class="level3">
+<h3 class="anchored" data-anchor-id="pub_cors_by">pub_cors_by()</h3>
 <p><code>pub_cors_by()</code> is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.</p>
-<p>I have updates to this function that I haven’t incorporated into my package yet which includes: - automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)</p>
+<p>I have updates to this function that I haven’t incorporated into my package yet which includes:</p>
+<ul>
+<li>automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)</li>
+</ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_by</span>(<span class="at">data        =</span> ll, <span class="co">#dataset </span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">cor_vars    =</span> ll_aos,  <span class="co">#vector of variabl names from the dataset to include in analysis</span></span>
@@ -239,6 +250,7 @@ attr(,"class")
 
 
 </section>
+</div>
 </section>
 </section>
 

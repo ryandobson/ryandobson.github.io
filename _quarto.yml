@@ -10,6 +10,7 @@ website:
       - href: research.qmd
       - href: code.qmd
       - href: cv.qmd
+      - href: unpublished_analyses.qmd
 
   page-footer:
     background: light
