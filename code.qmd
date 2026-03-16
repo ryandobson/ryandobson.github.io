@@ -76,6 +76,8 @@ I have updates to this function that I haven't incorporated into my package yet 
 
 - automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)
 
+- easier argument specification so as automatically specify group levels based on the grouping variable provided
+
 
 
 ```{r}
@@ -89,4 +91,35 @@ pub_cors_by(data        = ll, #dataset
              )
 
 ```
+
+:::
+
+
+::: {.function-card}
+
+### mlm_groupmean()
+
+
+```{r}
+library(tidyverse)
+
+ll2 <- ll |> pivot_longer(cols      = c(rec_g_1, ex_g_1), 
+                              names_to  = "love_form",
+                              values_to = "gift_1") 
+  mlm_groupmean(ll2, 
+              variables     = "gift_1", 
+              group         = "pid", 
+              within_affix  = "within_person_",
+              between_affix = "between_person_", 
+              affix_type    = "prefix", 
+              include_z     = TRUE
+              ) |> 
+  select(matches("pid|gift_1|within_|between_")) |> 
+  arrange(pid) |> 
+  head()
+
+```
+
+:::
+
 
