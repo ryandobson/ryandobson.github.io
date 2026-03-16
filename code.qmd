@@ -29,6 +29,7 @@ remotes::install_github("ryandobson/codechest")
 ```{r}
 #| include: false
 
+library(tidyverse)
 library(codechest)
 
 ll <- codechest::fivelovelanguages
@@ -99,10 +100,10 @@ pub_cors_by(data        = ll, #dataset
 
 ### mlm_groupmean()
 
+`mlm_groupmean()` is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multi-level model analyses.
+
 
 ```{r}
-library(tidyverse)
-
 ll2 <- ll |> pivot_longer(cols      = c(rec_g_1, ex_g_1), 
                               names_to  = "love_form",
                               values_to = "gift_1") 
@@ -117,7 +118,6 @@ ll2 <- ll |> pivot_longer(cols      = c(rec_g_1, ex_g_1),
   select(matches("pid|gift_1|within_|between_")) |> 
   arrange(pid) |> 
   head()
-
 ```
 
 :::
