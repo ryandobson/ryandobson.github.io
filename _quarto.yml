@@ -3,30 +3,46 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - papers.qmd
     - code.qmd
     - cv.qmd
 
 website:
-  title: "Ryan Dobson"
+  title: "Ryan T. Dobson"
+  description: "Ph.D. student in Evolution and Society, Department of Psychology, University of New Mexico."
   navbar:
+    pinned: true
     left:
       - href: index.qmd
-      - text: "Papers"
-        href: https://github.com/ryandobson/my_papers
+        text: "Home"
+      - href: papers.qmd
+        text: "Papers"
       - href: code.qmd
+        text: "Code"
       - href: cv.qmd
+        text: "CV"
 
   page-footer:
-    background: light
-    left: "© 2026 Ryan Dobson"
+    background: dark
+    left: "© 2026 Ryan T. Dobson"
+    center: "Ph.D. Student · Department of Psychology · University of New Mexico"
     right:
       - icon: github
         href: https://github.com/ryandobson
+        aria-label: GitHub
       - icon: envelope
         href: mailto:rdobson@unm.edu
+        aria-label: Email
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    anchor-sections: false
+    link-external-newwindow: true
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">

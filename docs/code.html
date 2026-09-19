@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="codechest — an R package of reusable functions for data cleaning, statistical modeling, and research workflows, by Ryan T. Dobson.">
 
-<title>Code – Ryan Dobson</title>
+<title>Code – Ryan T. Dobson</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -62,7 +63,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -72,12 +72,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92e10f6ce3446bec35b7753a50f36476.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2d446c851f0f43716746cb67b6033da7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,6 +104,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -118,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Ryan Dobson</span>
+    <span class="navbar-title">Ryan T. Dobson</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -132,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://github.com/ryandobson/my_papers"> 
+    <a class="nav-link" href="./papers.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
@@ -141,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./cv.html"> 
-<span class="menu-text">Curriculum Vitae</span></a>
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -151,36 +153,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="code" class="level1">
-<h1>Code</h1>
-<section id="codechest" class="level2">
-<h2 class="anchored" data-anchor-id="codechest">codechest</h2>
+<div class="band band-dark band-tight">
+<div class="wrap-narrow">
+<p><span class="eyebrow">Code</span></p>
+<section id="codechest" class="level2 section-title">
+<h2 class="section-title" data-anchor-id="codechest">codechest</h2>
+<div class="section-intro">
+<p>A personal toolbox of reusable R functions for data cleaning, statistical modeling, and research workflows.</p>
+</div>
+<div class="btn-row">
+<p><a href="https://github.com/ryandobson/codechest" class="btn-primary-c">View on GitHub</a></p>
+</div>
+</section>
+</div>
+</div>
+<div class="band">
+<div class="wrap-narrow">
+<div class="prose">
 <p><strong>codechest</strong> is an R package I began developing simply because I found myself repeatedly writing similar functions across different research projects. Over time, I started collecting and refining these functions so that I could move more efficiently between projects and maintain more consistent workflows.</p>
 <p>The package is therefore best thought of as a <strong>personal toolbox of reusable functions</strong> for data cleaning, statistical modeling, and research workflows. I continue to expand and update the package as I encounter new problems that benefit from reusable solutions.</p>
 <p>The code is still evolving and includes some quirks and idiosyncrasies that reflect the projects it grew out of. However, many of the functions may still be useful for others working on similar problems, and researchers are welcome to explore and adapt them.</p>
 <p>Repository: <a href="https://github.com/ryandobson/codechest">github.com/ryandobson/codechest</a></p>
+</div>
 <section id="install-the-package" class="level4">
-<h4 class="anchored" data-anchor-id="install-the-package">Install the package</h4>
+<h4 data-anchor-id="install-the-package">Install the package</h4>
 <p>You can install the development version of <strong>codechest</strong> from GitHub using:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"ryandobson/codechest"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-</section>
-<section id="example-functions" class="level2">
-<h2 class="anchored" data-anchor-id="example-functions">Example functions</h2>
+</div>
+</div>
+<div class="band band-cream">
+<div class="wrap">
+<p><span class="eyebrow">Examples</span></p>
+<section id="example-functions" class="level2 section-title">
+<h2 class="section-title" data-anchor-id="example-functions">Example functions</h2>
 <div class="function-card">
 <section id="pub_cors_all" class="level3">
-<h3 class="anchored" data-anchor-id="pub_cors_all">pub_cors_all()</h3>
+<h3 data-anchor-id="pub_cors_all">pub_cors_all()</h3>
 <p><code>pub_cors_all()</code> quickly generates a publication-ready correlation table for a set of variables.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#grab specific variable names as a vector</span></span>
@@ -192,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pleasing sexual"</span> <span class="ot">=</span> <span class="st">"rec_aos_pt_2"</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_all</span>(<span class="at">data       =</span> ll, <span class="co">#dataset </span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_all</span>(<span class="at">data       =</span> ll, <span class="co">#dataset</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">cor_vars   =</span> ll_aos,  <span class="co">#vector of variabl names from the dataset to include in analysis</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">rename_vec =</span> nice_names, <span class="co">#named vector to map new variable names</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">cor_use    =</span> <span class="st">"pairwise"</span>, <span class="co">#defaults to "pairwise" deletion of cases</span></span>
@@ -212,7 +230,7 @@ rec_aos_5 (8)       0.01  0.05 0.24  0.32 0.33 0.47 0.57 1.00</code></pre>
 </div>
 </section>
 <section id="pub_cors_by" class="level3">
-<h3 class="anchored" data-anchor-id="pub_cors_by">pub_cors_by()</h3>
+<h3 data-anchor-id="pub_cors_by">pub_cors_by()</h3>
 <p><code>pub_cors_by()</code> is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.</p>
 <p>I have updates to this function that I haven’t incorporated into my package yet which includes:</p>
 <ul>
@@ -220,7 +238,7 @@ rec_aos_5 (8)       0.01  0.05 0.24  0.32 0.33 0.47 0.57 1.00</code></pre>
 <li><p>easier argument specification so as automatically specify group levels based on the grouping variable provided</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_by</span>(<span class="at">data        =</span> ll, <span class="co">#dataset </span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_by</span>(<span class="at">data        =</span> ll, <span class="co">#dataset</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">cor_vars    =</span> ll_aos,  <span class="co">#vector of variabl names from the dataset to include in analysis</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">group_var   =</span> <span class="st">"sex_bio"</span>,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">groups      =</span> <span class="fu">levels</span>(ll<span class="sc">$</span>sex_bio),</span>
@@ -257,22 +275,22 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 </section>
 </div>
 <section id="mlm_groupmean" class="level3 function-card">
-<h3 class="anchored" data-anchor-id="mlm_groupmean">mlm_groupmean()</h3>
+<h3 data-anchor-id="mlm_groupmean">mlm_groupmean()</h3>
 <p><code>mlm_groupmean()</code> is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multilevel model analyses.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ll2 <span class="ot">&lt;-</span> ll <span class="sc">|&gt;</span> <span class="fu">pivot_longer</span>(<span class="at">cols      =</span> <span class="fu">c</span>(rec_g_1, ex_g_1), </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ll2 <span class="ot">&lt;-</span> ll <span class="sc">|&gt;</span> <span class="fu">pivot_longer</span>(<span class="at">cols      =</span> <span class="fu">c</span>(rec_g_1, ex_g_1),</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">names_to  =</span> <span class="st">"love_form"</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">values_to =</span> <span class="st">"gift_1"</span>) </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mlm_groupmean</span>(ll2, </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">variables     =</span> <span class="st">"gift_1"</span>, </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">group         =</span> <span class="st">"pid"</span>, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">values_to =</span> <span class="st">"gift_1"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mlm_groupmean</span>(ll2,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">variables     =</span> <span class="st">"gift_1"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">group         =</span> <span class="st">"pid"</span>,</span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">within_affix  =</span> <span class="st">"within_person_"</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">between_affix =</span> <span class="st">"between_person_"</span>, </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">between_affix =</span> <span class="st">"between_person_"</span>,</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">affix_type    =</span> <span class="st">"prefix"</span>, <span class="co">#add a prefix. 'suffix' is the other option</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">include_z     =</span> <span class="cn">TRUE</span> <span class="co">#includes Z-scored versions of the variables</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>              ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"pid|gift_1|within_|between_"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pid) <span class="sc">|&gt;</span> </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>              ) <span class="sc">|&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"pid|gift_1|within_|between_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pid) <span class="sc">|&gt;</span></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 6
@@ -288,21 +306,15 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 </div>
 </div>
 </section>
-
-
 </section>
-</section>
+</div>
+</div>
 
-</main> <!-- /main -->
+
+
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -381,6 +393,11 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -698,22 +715,22 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Ryan Dobson</p>
+<p>© 2026 Ryan T. Dobson</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<p>Ph.D.&nbsp;Student · Department of Psychology · University of New Mexico</p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/ryandobson">
-      <i class="bi bi-github" role="img">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="mailto:rdobson@unm.edu">
-      <i class="bi bi-envelope" role="img">
+      <i class="bi bi-envelope" role="img" aria-label="Email">
 </i> 
     </a>
   </li>  

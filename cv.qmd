@@ -1,10 +1,33 @@
 ---
 pagetitle: "Curriculum Vitae"
-title-block: false
+description-meta: "Curriculum vitae for Ryan T. Dobson, Ph.D. student in Evolution and Society, Department of Psychology, University of New Mexico."
+page-layout: custom
 toc: false
-format: html
 ---
 
-# Curriculum Vitae
+::: {.band .band-dark .band-tight}
+::: {.wrap-narrow}
+[Curriculum Vitae]{.eyebrow}
 
-[View my CV](files/Ryan_Dobson_CV_sept19_2026.pdf)
+## Education, publications, and current projects {.section-title}
+
+::: {.btn-row}
+[Download PDF](files/Ryan_Dobson_CV_sept19_2026.pdf){.btn-primary-c}
+[Email me](mailto:rdobson@unm.edu){.btn-ghost}
+:::
+:::
+:::
+
+::: {.band}
+::: {.wrap}
+```{=html}
+<object data="files/Ryan_Dobson_CV_sept19_2026.pdf#view=FitH" type="application/pdf"
+        style="width:100%;height:min(1000px,85vh);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);">
+  <p style="padding:2rem;text-align:center;color:var(--muted);">
+    Your browser can't display the PDF inline.
+    <a href="files/Ryan_Dobson_CV_sept19_2026.pdf">Download the CV instead</a>.
+  </p>
+</object>
+```
+:::
+:::

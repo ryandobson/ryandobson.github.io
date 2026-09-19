@@ -1,47 +1,175 @@
 ---
-title: "Home"
+pagetitle: "Ryan T. Dobson"
+description-meta: "Ryan T. Dobson — Ph.D. student in the Evolution and Society area, Department of Psychology, University of New Mexico. Research on the evolutionary and developmental foundations of human social relationships and sexual behavior."
+page-layout: custom
 toc: false
-format: html
 ---
 
+::: {.hero}
+::: {.wrap}
+::: {.hero-grid}
 
-:::: {.columns}
-
-::: {.column width="35%"}
-
-![](files/images/unm_free_personal_headshot.jpg){.profile-photo}
-
-:::
-
-::: {.column width="65%"}
+::: {}
+[Ph.D. Student · Evolution and Society · University of New Mexico]{.eyebrow}
 
 # Ryan T. Dobson
 
-Ph.D. Student, Evolution and Society Area  
-Department of Psychology  
-University of New Mexico
+::: {.hero-role}
+Department of Psychology [·]{.sep} University of New Mexico
+:::
+
+::: {.hero-lede}
+My research focuses on the evolutionary and developmental foundations of
+human social relationships and sexual behavior.
+:::
+
+::: {.btn-row}
+[Read the papers](papers.qmd){.btn-primary-c}
+[Download CV](files/Ryan_Dobson_CV_sept19_2026.pdf){.btn-ghost}
+:::
 
 ::: {.profile-links}
-[CV](files/Ryan_Dobson_CV_sept19_2026.pdf)
-[Papers](https://github.com/ryandobson/my_papers)
 [Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
 [GitHub](https://github.com/ryandobson)
 [LinkedIn](https://www.linkedin.com/in/ryan-dobson-2022abc)
 [Email](mailto:rdobson@unm.edu)
 :::
-
 :::
 
-::::
+![](files/images/unm_free_personal_headshot.jpg){.hero-photo fig-alt="Ryan T. Dobson"}
 
-## About
+:::
+:::
+:::
 
-I am a Ph.D. student in the Evolution and Society area of the Department of Psychology at the University of New Mexico. My research focuses on the evolutionary and developmental foundations of human social relationships and sexual behavior. Much of my work examines cross-sex friendships, relationship dynamics, and the developmental pathways that shape variation in sexual behavior.
+::: {.band}
+::: {.wrap-narrow}
+[About]{.eyebrow}
 
-I am broadly interested in integrating multiple methodological approaches—including genetically informed designs, longitudinal and intensive longitudinal data, and hormonal measures—to better understand how biological and environmental processes jointly influence human social and mating behavior.
+## The short version {.section-title}
 
-## Explore
+::: {.prose}
+I am a Ph.D. student in the Evolution and Society area of the Department of
+Psychology at the University of New Mexico. My research focuses on the
+evolutionary and developmental foundations of human social relationships and
+sexual behavior. Much of my work examines cross-sex friendships, relationship
+dynamics, and the developmental pathways that shape variation in sexual
+behavior.
 
-- [Papers](https://github.com/ryandobson/my_papers) – final draft versions of the papers I have submitted  
-- [Code](code.qmd) – statistical tools and my R package *codechest*  
-- [CV](cv.qmd) – education, publications, and current projects
+I am broadly interested in integrating multiple methodological approaches—including
+genetically informed designs, longitudinal and intensive longitudinal data, and
+hormonal measures—to better understand how biological and environmental
+processes jointly influence human social and mating behavior.
+:::
+:::
+:::
+
+::: {.band .band-cream}
+::: {.wrap}
+[Research]{.eyebrow}
+
+## What I work on {.section-title}
+
+::: {.section-intro}
+Three threads run through my work. Each one asks how biological and
+environmental processes jointly shape human social and mating behavior.
+:::
+
+::: {.card-grid}
+
+::: {.c-card}
+[01]{.c-card-num}
+
+### Cross-sex friendship and courtship
+
+How mating motivations shape friendships between men and women, and how
+courtship behavior is signalled and perceived within them.
+
+::: {.tags}
+[Mating psychology]{.tag}
+[Relationships]{.tag}
+:::
+:::
+
+::: {.c-card}
+[02]{.c-card-num}
+
+### Hormones and the ovulatory cycle
+
+How women's sexual psychology and emotional states shift across the cycle,
+and what estradiol and progesterone have to do with it.
+
+::: {.tags}
+[Intensive longitudinal]{.tag}
+[Endocrinology]{.tag}
+:::
+:::
+
+::: {.c-card}
+[03]{.c-card-num}
+
+### Sexual development and behavior genetics
+
+Using genetically informed designs to separate environmental effects from
+genetic confounding in how families shape sexual development.
+
+::: {.tags}
+[Adoption designs]{.tag}
+[Sibling comparison]{.tag}
+:::
+:::
+
+:::
+:::
+:::
+
+::: {.band}
+::: {.wrap}
+[Elsewhere]{.eyebrow}
+
+## Papers, code, and CV {.section-title}
+
+::: {.card-grid}
+
+::: {.c-card}
+### Papers
+
+Final submitted drafts of my manuscripts, with a short overview of each,
+available to download directly.
+
+[Browse papers →](papers.qmd){.btn-quiet}
+:::
+
+::: {.c-card}
+### Code
+
+*codechest*, an R package of reusable functions for data cleaning,
+statistical modeling, and research workflows.
+
+[See the code →](code.qmd){.btn-quiet}
+:::
+
+::: {.c-card}
+### Curriculum Vitae
+
+Education, publications, presentations, teaching, and current projects.
+
+[View CV →](cv.qmd){.btn-quiet}
+:::
+
+:::
+:::
+:::
+
+::: {.band .band-dark .band-tight}
+::: {.wrap-narrow}
+[Get in touch]{.eyebrow}
+
+## Always glad to hear from people working on related questions {.section-title}
+
+::: {.btn-row}
+[rdobson@unm.edu](mailto:rdobson@unm.edu){.btn-primary-c}
+[Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en){.btn-ghost}
+:::
+:::
+:::
