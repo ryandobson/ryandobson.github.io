@@ -1,4 +1,5 @@
 ---
+pagetitle: "Curriculum Vitae"
 title-block: false
 toc: false
 format: html
@@ -6,4 +7,4 @@ format: html
 
 # Curriculum Vitae
 
-[Download my CV](files/Ryan_Dobson_CV_march15_2026.pdf)
+[View my CV](files/Ryan_Dobson_CV_sept19_2026.pdf)

@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>code – Ryan Dobson</title>
+<title>Code – Ryan Dobson</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -67,15 +70,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d34d6fb547be8940ebf3b1b41525d5d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-92e10f6ce3446bec35b7753a50f36476.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,8 +117,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Ryan Dobson</span>
     </a>
@@ -132,12 +132,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
-<span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./unpublished_analyses.html"> 
-<span class="menu-text">Unpublished Analyses</span></a>
+    <a class="nav-link" href="https://github.com/ryandobson/my_papers"> 
+<span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./code.html" aria-current="page"> 
@@ -242,17 +238,27 @@ rec_aos_2 (5)       0.08 0.11 0.22 0.36 1.00 0.33 0.35 0.32
 rec_aos_3 (6)       0.14 0.14 0.25 0.24 0.29 1.00 0.56 0.42
 rec_aos_4 (7)       0.08 0.02 0.21 0.30 0.31 0.61 1.00 0.51
 rec_aos_5 (8)       0.08 0.10 0.26 0.25 0.25 0.46 0.57 1.00
-attr(,"note")
-[1] "Upper triangle = Male, Lower triangle = Female"
-attr(,"class")
-[1] "pub_cors_mat" "matrix"       "array"       </code></pre>
+
+Upper triangle = Male, Lower triangle = Female
+
+Group differences: Male - Female
+
+                        1    2     3    4    5     6     7     8
+oral sex (1)         0.00 0.09  0.07 0.05 0.03  0.04  0.08 -0.01
+pleasing sexual (2)  0.09 0.00  0.04 0.04 0.01  0.01  0.15  0.05
+rec_aos_pt_3 (3)     0.07 0.04  0.00 0.03 0.04  0.00  0.08 -0.09
+rec_aos_1 (4)        0.05 0.04  0.03 0.00 0.08  0.13  0.08  0.03
+rec_aos_2 (5)        0.03 0.01  0.04 0.08 0.00  0.04  0.04  0.07
+rec_aos_3 (6)        0.04 0.01  0.00 0.13 0.04  0.00 -0.04 -0.04
+rec_aos_4 (7)        0.08 0.15  0.08 0.08 0.04 -0.04  0.00 -0.06
+rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 </div>
 </div>
 </section>
 </div>
 <section id="mlm_groupmean" class="level3 function-card">
 <h3 class="anchored" data-anchor-id="mlm_groupmean">mlm_groupmean()</h3>
-<p><code>mlm_groupmean()</code> is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multi-level model analyses.</p>
+<p><code>mlm_groupmean()</code> is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multilevel model analyses.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ll2 <span class="ot">&lt;-</span> ll <span class="sc">|&gt;</span> <span class="fu">pivot_longer</span>(<span class="at">cols      =</span> <span class="fu">c</span>(rec_g_1, ex_g_1), </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">names_to  =</span> <span class="st">"love_form"</span>,</span>
@@ -262,8 +268,8 @@ attr(,"class")
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">group         =</span> <span class="st">"pid"</span>, </span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">within_affix  =</span> <span class="st">"within_person_"</span>,</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">between_affix =</span> <span class="st">"between_person_"</span>, </span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">affix_type    =</span> <span class="st">"prefix"</span>, </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">include_z     =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">affix_type    =</span> <span class="st">"prefix"</span>, <span class="co">#add a prefix. 'suffix' is the other option</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">include_z     =</span> <span class="cn">TRUE</span> <span class="co">#includes Z-scored versions of the variables</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>              ) <span class="sc">|&gt;</span> </span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"pid|gift_1|within_|between_"</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pid) <span class="sc">|&gt;</span> </span>

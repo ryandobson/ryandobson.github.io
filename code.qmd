@@ -1,4 +1,5 @@
 ---
+pagetitle: "Code"
 title-block: false
 toc: false
 format: html
@@ -100,7 +101,7 @@ pub_cors_by(data        = ll, #dataset
 
 ### mlm_groupmean()
 
-`mlm_groupmean()` is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multi-level model analyses.
+`mlm_groupmean()` is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multilevel model analyses.
 
 
 ```{r}
@@ -112,8 +113,8 @@ ll2 <- ll |> pivot_longer(cols      = c(rec_g_1, ex_g_1),
               group         = "pid", 
               within_affix  = "within_person_",
               between_affix = "between_person_", 
-              affix_type    = "prefix", 
-              include_z     = TRUE
+              affix_type    = "prefix", #add a prefix. 'suffix' is the other option
+              include_z     = TRUE #includes Z-scored versions of the variables
               ) |> 
   select(matches("pid|gift_1|within_|between_")) |> 
   arrange(pid) |> 

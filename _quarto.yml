@@ -1,14 +1,18 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - code.qmd
+    - cv.qmd
 
 website:
   title: "Ryan Dobson"
   navbar:
     left:
       - href: index.qmd
-      - href: research.qmd
-      - href: unpublished_analyses.qmd
+      - text: "Papers"
+        href: https://github.com/ryandobson/my_papers
       - href: code.qmd
       - href: cv.qmd
 

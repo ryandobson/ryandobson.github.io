@@ -22,7 +22,8 @@ Department of Psychology
 University of New Mexico
 
 ::: {.profile-links}
-[CV](files/Ryan_Dobson_CV_march15_2026.pdf)
+[CV](files/Ryan_Dobson_CV_sept19_2026.pdf)
+[Papers](https://github.com/ryandobson/my_papers)
 [Google Scholar](https://scholar.google.com/citations?user=y7DOvyMAAAAJ&hl=en)
 [GitHub](https://github.com/ryandobson)
 [LinkedIn](https://www.linkedin.com/in/ryan-dobson-2022abc)
@@ -41,9 +42,6 @@ I am broadly interested in integrating multiple methodological approaches—incl
 
 ## Explore
 
-You can find more information about my work elsewhere on this site:
-
-- [Research](research.qmd) – publications and ongoing projects  
-- [Unpublished Analyses](unpublished_analyses.qmd) – exploratory analyses and research notes  
-- [Code](code.qmd) – statistical tools and my R package *codechest*
-
+- [Papers](https://github.com/ryandobson/my_papers) – final draft versions of the papers I have submitted  
+- [Code](code.qmd) – statistical tools and my R package *codechest*  
+- [CV](cv.qmd) – education, publications, and current projects
