@@ -402,10 +402,11 @@ potential domains of application to understanding friendship more broadly.
 ::: {.paper}
 
 ::: {.paper-figure}
-![](files/figures/five-love-languages.png){fig-alt="Two panels, factor expression score and factor reception score, plotting rank mean against love language rank for men and women. Both sexes show the same declining pattern."}
+![](files/figures/five-love-languages.png){fig-alt="Grouped bar chart of mean ratings for five love languages, split by sex, shown separately for expression and reception. Women rate every love language higher than men except pleasing me sexually, where men rate higher."}
 
-Rank means decline the same way for men and women across both the expression
-and reception formats.
+Women rated every love language higher than men did — except *pleasing me
+sexually*, the only one men rated higher, in both the expression and reception
+formats.
 :::
 
 ::: {.paper-body}
