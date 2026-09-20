@@ -1,6 +1,6 @@
 ---
 pagetitle: "Code"
-description-meta: "codechest — an R package of reusable functions for data cleaning, statistical modeling, and research workflows, by Ryan T. Dobson."
+description-meta: "codechest — an R package of reusable functions for ANOVA workflows, multilevel models, correlations, factor analysis, reliability, and APA reporting, by Ryan T. Dobson."
 page-layout: custom
 toc: false
 ---
@@ -12,8 +12,9 @@ toc: false
 ## codechest {.section-title}
 
 ::: {.section-intro}
-A personal toolbox of reusable R functions for data cleaning, statistical
-modeling, and research workflows.
+An R package of reusable functions for ANOVA workflows, multilevel models,
+correlation tables, factor analysis, scale reliability, and APA-formatted
+reporting.
 :::
 
 ::: {.btn-row}
@@ -61,9 +62,111 @@ ll <- codechest::fivelovelanguages
 ::: {.band .band-cream}
 ::: {.wrap}
 
+[What's inside]{.eyebrow}
+
+## Function families {.section-title}
+
+::: {.section-intro}
+The package currently exports around ninety functions. They fall into a few
+groups, most of which grew out of a specific analysis that I did not want to
+write twice.
+:::
+
+::: {.card-grid}
+
+::: {.c-card}
+### ANOVA workflows
+
+Assumption checks that interpret themselves, means tables, plots, a
+multiverse of analysis specifications, and write-ups.
+
+::: {.tags}
+[anova_check()]{.tag}
+[anova_workup()]{.tag}
+[anova_multi()]{.tag}
+:::
+:::
+
+::: {.c-card}
+### Multilevel models
+
+Within- and between-group decomposition, stepwise random-effects comparison,
+formula construction, and fixed-effect trimming.
+
+::: {.tags}
+[mlm_groupmean()]{.tag}
+[mlm_comparison()]{.tag}
+[build_formulas()]{.tag}
+:::
+:::
+
+::: {.c-card}
+### Correlations
+
+Publication-ready correlation matrices, including split tables that show two
+groups above and below the diagonal.
+
+::: {.tags}
+[pub_cors_all()]{.tag}
+[pub_cors_by()]{.tag}
+[top_cor_diff()]{.tag}
+:::
+:::
+
+::: {.c-card}
+### Factor analysis and reliability
+
+EFA summaries, factor loadings, scale reliability, and measurement invariance
+testing across groups.
+
+::: {.tags}
+[efa_results()]{.tag}
+[scale_reliabilities()]{.tag}
+[test_measurement_invariance()]{.tag}
+:::
+:::
+
+::: {.c-card}
+### APA reporting
+
+Model tables and reports formatted for APA style, with helpers to write them
+straight out to Word.
+
+::: {.tags}
+[apa_lmer_model()]{.tag}
+[apa_mlm_report()]{.tag}
+[format_p()]{.tag}
+:::
+:::
+
+::: {.c-card}
+### Plotting and utilities
+
+ggplot themes and palettes, quick distribution checks, and variable labels
+that survive subsetting.
+
+::: {.tags}
+[dynamic_histogram()]{.tag}
+[set_var_labels()]{.tag}
+[gline_theme()]{.tag}
+:::
+:::
+
+:::
+:::
+:::
+
+::: {.band}
+::: {.wrap}
+
 [Examples]{.eyebrow}
 
 ## Example functions {.section-title}
+
+::: {.section-intro}
+Each example below runs against `fivelovelanguages`, a cleaned dataset from my
+master's thesis that ships with the package.
+:::
 
 ::: {.function-card}
 
@@ -116,6 +219,50 @@ pub_cors_by(data        = ll, #dataset
             rnd         = 2 #default rounds to 2
              )
 
+```
+
+:::
+
+
+::: {.function-card}
+
+### scale_reliabilities()
+
+`scale_reliabilities()` computes reliability for several scales in one call, and `tidy_scale_reliabilities()` collapses the result into a single table you can drop straight into a manuscript.
+
+Rather than just Cronbach's alpha, it also reports omega total and a unidimensionality index, which is useful when you want to know whether treating a set of items as one score is defensible in the first place.
+
+```{r}
+#| warning: false
+#| message: false
+
+# pull the item sets for four of the love languages (reception format)
+grab <- function(pattern) grep(pattern, names(ll), value = TRUE)
+
+love_language_scales <- list(
+  "Words of affirmation" = grab("^rec_woa_[0-9]+$"),
+  "Quality time"         = grab("^rec_qt_[0-9]+$"),
+  "Physical touch"       = grab("^rec_pt_[0-9]+$"),
+  "Gifts"                = grab("^rec_g_[0-9]+$")
+)
+
+rel <- scale_reliabilities(ll, scales = love_language_scales)
+
+tidy_scale_reliabilities(rel, rnd = 2)
+```
+
+Passing a `group` argument returns the same table split by group, which makes it easy to check that a scale behaves similarly for everyone before you compare means across groups.
+
+```{r}
+#| warning: false
+#| message: false
+
+rel_by_sex <- scale_reliabilities(ll,
+                                  scales = love_language_scales,
+                                  group  = "sex_bio",
+                                  groups = levels(ll$sex_bio))
+
+tidy_scale_reliabilities(rel_by_sex, rnd = 2)
 ```
 
 :::
