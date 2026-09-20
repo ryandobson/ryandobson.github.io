@@ -1,6 +1,6 @@
 ---
 pagetitle: "Papers"
-description-meta: "Manuscripts by Ryan T. Dobson on cross-sex friendship, ovulatory cycle shifts, hormones, and the development of sexual behavior. Final submitted drafts available to download."
+description-meta: "Manuscripts, conference talks, and posters by Ryan T. Dobson on cross-sex friendship, ovulatory cycle shifts, hormones, and the development of sexual behavior. Final submitted drafts available to download."
 page-layout: custom
 toc: false
 ---
@@ -14,7 +14,8 @@ toc: false
 ::: {.section-intro}
 These are final submitted drafts rather than publisher proofs, so formatting
 and pagination will differ from the version of record. Each entry includes a
-short overview and the full abstract. Happy to talk about any of this —
+short overview, the full abstract, and any conference talks or posters given
+on the work. Happy to talk about any of this —
 [rdobson@unm.edu](mailto:rdobson@unm.edu).
 :::
 :::
@@ -155,6 +156,14 @@ an understanding of how women's sexual psychology shifts across the cycle.
 [Download PDF](files/papers/dobson-dinh-gangestad-2026-ovulatory-extra-pair-interests.pdf){.btn-quiet}
 :::
 
+::: {.paper-extras}
+[Presented as]{.extras-label}
+
+::: {.extras-list}
+[[Talk]{.extra-kind}NEEPS 2026](files/talks/dobson-2026-ovulatory-extra-pair-talk-neeps.pdf){.extra-link}
+:::
+:::
+
 ::: {.tags}
 [Ovulatory cycle]{.tag}
 [Preregistered]{.tag}
@@ -166,6 +175,15 @@ an understanding of how women's sexual psychology shifts across the cycle.
 <!-- ------------------------------------------------------------------ -->
 
 ::: {.paper}
+
+::: {.paper-figure}
+![](files/figures/parent-offspring-adolescent-sexual-behavior.png){fig-alt="Scatter plot of sexual behavior against parent-offspring relationship quality, with separate fitted lines for offspring-reported and parent-reported relationship quality. Both slope downward."}
+
+Higher parent-offspring relationship quality predicts lower-risk sexual
+behavior, and the association holds whether parents or offspring rated the
+relationship.
+:::
+
 ::: {.paper-body}
 ::: {.paper-meta}
 [2026]{.paper-year}
@@ -227,6 +245,15 @@ underlying this association to inform interventions.
 [Download PDF](files/papers/dobson-etal-2026-parent-offspring-adolescent-sexual-behavior.pdf){.btn-quiet}
 :::
 
+::: {.paper-extras}
+[Presented as]{.extras-label}
+
+::: {.extras-list}
+[[Talk]{.extra-kind}BGA 2026](files/talks/dobson-2026-parent-offspring-talk-bga.pdf){.extra-link}
+[[Talk]{.extra-kind}HBES 2026](files/talks/dobson-2026-parent-offspring-talk-hbes.pdf){.extra-link}
+:::
+:::
+
 ::: {.tags}
 [Behavior genetics]{.tag}
 [Adoption design]{.tag}
@@ -238,6 +265,14 @@ underlying this association to inform interventions.
 <!-- ------------------------------------------------------------------ -->
 
 ::: {.paper}
+
+::: {.paper-figure}
+![](files/figures/progesterone-negative-emotionality.png){fig-alt="Scatter plot of negative affect against cycle average progesterone with an upward-sloping fitted line, showing the between-women association."}
+
+Women with higher cycle-average progesterone reported more negative affect —
+a between-women association, not a within-woman one.
+:::
+
 ::: {.paper-body}
 ::: {.paper-meta}
 [2026]{.paper-year}
@@ -288,6 +323,15 @@ needed before definitive causal conclusions can be offered.
 [Download PDF](files/papers/dobson-etal-2026-progesterone-negative-emotionality.pdf){.btn-quiet}
 :::
 
+::: {.paper-extras}
+[Presented as]{.extras-label}
+
+::: {.extras-list}
+[[Talk]{.extra-kind}HBES 2025](files/talks/dobson-2025-progesterone-emotionality-talk-hbes.pdf){.extra-link}
+[[Talk]{.extra-kind}SPSP 2025](files/talks/dobson-2025-progesterone-emotionality-talk-spsp.pdf){.extra-link}
+:::
+:::
+
 ::: {.tags}
 [Hormones]{.tag}
 [Ovulatory cycle]{.tag}
@@ -299,6 +343,71 @@ needed before definitive causal conclusions can be offered.
 <!-- ------------------------------------------------------------------ -->
 
 ::: {.paper}
+::: {.paper-body}
+::: {.paper-meta}
+[2026]{.paper-year}
+[Manuscript]{.paper-status}
+:::
+
+### Considering the Evolutionary Benefits and Costs of Friendship Networks
+
+::: {.paper-authors}
+Grace Vieth, [Ryan T. Dobson]{.me}, Jeffrey Simpson, & Steven W. Gangestad
+:::
+
+::: {.paper-overview}
+A conceptual paper on the adaptive problems created by having several friends
+at once. Adding a friend can raise your total benefit while making each
+existing friend more replaceable — which undercuts the irreplaceability that
+sustains stake-based investment in the first place.
+:::
+
+<details>
+<summary>Full abstract</summary>
+
+Recent efforts have sought to redress the relative paucity of theoretical work
+on the adaptive benefits that led friendships to be fundamentally important
+close human relationships (e.g., viewing investment in them as stake-based).
+Still, relatively little work has specifically addressed adaptations that
+function to developing, maintaining, and regulating friendship networks,
+generally consisting of multiple friends. This paper explores this domain.
+Following other scholars, we observe that a key quality of friendships that
+maintains stake-based investment in them is irreplaceability. Adding a friend
+to one's friendship network may have marginal net benefits. Yet the added
+friend may not only be less irreplaceable than others in the network; the added
+friend may reduce the irreplaceability of other friends in the network, thereby
+potentially weakening stake-based investment crucial to friendship. We discuss
+multiple adaptive problems that arise and potential solutions to them,
+suggestive of adaptations that people possess for the function of developing,
+maintaining, and regulating friendship networks. Future directions for
+potentially fruitful conceptual and empirical exploration are discussed, as are
+potential domains of application to understanding friendship more broadly.
+
+</details>
+
+::: {.paper-actions}
+[Download PDF](files/papers/vieth-dobson-simpson-gangestad-2026-friendship-networks.pdf){.btn-quiet}
+:::
+
+::: {.tags}
+[Friendship]{.tag}
+[Fitness interdependence]{.tag}
+[Theory]{.tag}
+:::
+:::
+:::
+
+<!-- ------------------------------------------------------------------ -->
+
+::: {.paper}
+
+::: {.paper-figure}
+![](files/figures/five-love-languages.png){fig-alt="Two panels, factor expression score and factor reception score, plotting rank mean against love language rank for men and women. Both sexes show the same declining pattern."}
+
+Rank means decline the same way for men and women across both the expression
+and reception formats.
+:::
+
 ::: {.paper-body}
 ::: {.paper-meta}
 [2024]{.paper-year}
@@ -341,6 +450,15 @@ to do and how they might best achieve those aims.
 [Download PDF](files/papers/dobson-2024-five-love-languages-thesis.pdf){.btn-quiet}
 :::
 
+::: {.paper-extras}
+[Presented as]{.extras-label}
+
+::: {.extras-list}
+[[Poster]{.extra-kind .is-poster}SPSP 2025](files/posters/dobson-2025-five-love-languages-poster-spsp.pdf){.extra-link}
+[[Lecture]{.extra-kind .is-lecture}Guest lecture](files/talks/dobson-2025-five-love-languages-guest-lecture.pdf){.extra-link}
+:::
+:::
+
 ::: {.tags}
 [Psychometrics]{.tag}
 [Factor analysis]{.tag}
@@ -349,18 +467,128 @@ to do and how they might best achieve those aims.
 :::
 :::
 
+<!-- ------------------------------------------------------------------ -->
+
+::: {.paper}
+::: {.paper-body}
+::: {.paper-meta}
+[2022]{.paper-year}
+[Honors Thesis · UW–Eau Claire]{.paper-status .is-published}
+:::
+
+### Jealousy in Opposite-Sex Friendships: The Threat of Being Replaced
+
+::: {.paper-authors}
+[Ryan T. Dobson]{.me} — Committee: April Bleske-Rechek (Psychology),
+Kristin Schaupp (Philosophy)
+:::
+
+::: {.paper-overview}
+My undergraduate honors thesis. Asks who you feel most threatened by when your
+closest opposite-sex friend forms a new relationship (*n* = 158). A same-sex
+friend interloper provoked the least jealousy — but, contrary to prediction,
+men and women reacted alike.
+:::
+
+<details>
+<summary>Full abstract</summary>
+
+When people are asked to imagine the loss of their best same-sex friend, a
+same-sex interloper (versus an opposite-sex friend interloper or romantic
+partner interloper) elicits the most jealousy (Krems et al., 2021). In the
+context of being asked to imagine their best opposite-sex friend starting three
+new types of relationships (same-sex friendship, opposite-sex friendship,
+romantic relationship), I predicted that a same-sex friend interloper would
+elicit less jealousy than an opposite-sex friend interloper or romantic partner
+interloper would, because opposite-sex friends can serve as friends or
+potential romantic partners. In addition, because men (compared to women) are
+more likely to perceive their opposite-sex friend as a potential sexual partner
+and women (compared to men) are more likely to perceive their opposite-sex
+friend as a platonic friend. I predicted that men would be more jealous of the
+romantic partner interloper than women, and women would be more jealous of the
+opposite-sex friend interloper than men. In the current study (*n* = 158, 51%
+female), I found that when participants are asked to imagine a best
+opposite-sex friend starting new relationships, a same-sex friend interloper
+evoked less jealousy than an opposite-sex friend interloper or romantic partner
+interloper did. Contrary to expectations men and women were similarly jealous
+of the opposite-sex friend interloper and romantic partner interloper. One
+direction for future research is to separate romantic jealousy from friendship
+jealousy in the opposite-sex friendship context.
+
+</details>
+
+::: {.paper-actions}
+[Download PDF](files/papers/dobson-2022-jealousy-opposite-sex-friendships-honors-thesis.pdf){.btn-quiet}
+:::
+
+::: {.tags}
+[Jealousy]{.tag}
+[Opposite-sex friendship]{.tag}
+[Undergraduate]{.tag}
+:::
+:::
+:::
+
 :::
 :::
 
-::: {.band .band-cream .band-tight}
-::: {.wrap-narrow}
-[Also]{.eyebrow}
+<!-- ================================================================== -->
 
-## Co-authored work {.section-title}
+::: {.band .band-cream}
+::: {.wrap}
+[Additional work]{.eyebrow}
 
-::: {.prose}
-Vieth et al. (2025), *Considering the evolutionary benefits and costs of
-friendship networks*. A copy is not posted here yet.
+## Talks and posters without a manuscript {.section-title}
+
+::: {.section-intro}
+Work I have presented at conferences that has not been written up as a
+manuscript. Happy to share data or discuss any of it.
+:::
+
+::: {.card-grid}
+
+::: {.c-card}
+[Talk · NEEPS 2025]{.c-card-num}
+
+### Toward an Evolutionary Informed Understanding of Cross-Sex Friendships
+
+A theoretical talk on whether platonic cross-sex friendships solved recurrent
+adaptive problems, drawing on comparative evidence from other primates.
+
+[Download slides](files/talks/dobson-2025-cross-sex-friendships-talk-neeps.pdf){.btn-quiet}
+:::
+
+::: {.c-card}
+[Poster · HBES 2024]{.c-card-num}
+
+### The Evolutionary Psychology of BDSM
+
+Insights from a factor-analytic study of 136 sexual kinks in 33,668 adults.
+
+[Download poster](files/posters/dobson-2024-bdsm-sexual-kinks-poster-hbes.pdf){.btn-quiet}
+:::
+
+::: {.c-card}
+[Poster · HBES 2024]{.c-card-num}
+
+### Women and men, harm and censoriousness
+
+Sex-differentiated reactions to information about sex differences.
+With Parker Lay.
+
+[Download poster](files/posters/dobson-2024-sex-differences-censoriousness-poster-hbes.pdf){.btn-quiet}
+:::
+
+::: {.c-card}
+[Poster · ISIR 2025]{.c-card-num}
+
+### Specific Cognitive Abilities Predict Socio-Political Attitudes Above and Beyond *g*
+
+With Tobias Edwards.
+
+[Download poster](files/posters/dobson-2025-cognitive-abilities-political-attitudes-poster-isir.pdf){.btn-quiet}
+:::
+
 :::
 :::
 :::

@@ -8,3 +8,8 @@
 
 # unfinished drafts (kept locally, not published)
 reflections.qmd
+
+# source decks for talks/posters (converted PDFs live in files/talks and files/posters)
+conference_talk_slides/
+conference_posters/
+~$*

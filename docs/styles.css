@@ -539,6 +539,56 @@ section.section-title { font-size: inherit; }
 
 .paper-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
 
+/* Talks and posters hanging off a manuscript */
+.paper-extras {
+  margin-top: 1.35rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line-soft);
+}
+.extras-label {
+  display: block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .7rem;
+}
+.extras-list { display: flex; flex-wrap: wrap; gap: .55rem; }
+.extra-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: .86rem;
+  font-weight: 500;
+  color: var(--body) !important;
+  text-decoration: none !important;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: .45rem .8rem;
+  transition: border-color .16s ease, background .16s ease, transform .16s ease;
+}
+.extra-link:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary-dark) !important;
+  transform: translateY(-1px);
+}
+.extra-kind {
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 3px;
+  padding: .17rem .4rem;
+  flex-shrink: 0;
+}
+.extra-kind.is-poster { background: var(--accent-dark); }
+.extra-kind.is-lecture { background: var(--muted); }
+
 /* --------------------------------------------------------------------------
    Code page — function cards
    -------------------------------------------------------------------------- */
