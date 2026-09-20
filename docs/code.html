@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="codechest — an R package of reusable functions for ANOVA workflows, multilevel models, correlations, factor analysis, reliability, and APA reporting, by Ryan T. Dobson.">
+<meta name="description" content="codechest — an R package of reusable functions for multilevel models, correlation tables, factor analysis, scale reliability, and APA reporting, by Ryan T. Dobson.">
 
 <title>Code – Ryan T. Dobson</title>
 <style>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="codechest" class="level2 section-title">
 <h2 class="section-title" data-anchor-id="codechest">codechest</h2>
 <div class="section-intro">
-<p>An R package of reusable functions for ANOVA workflows, multilevel models, correlation tables, factor analysis, scale reliability, and APA-formatted reporting.</p>
+<p>An R package of reusable functions for multilevel models, correlation tables, factor analysis, scale reliability, and APA-formatted reporting.</p>
 </div>
 <div class="btn-row">
 <p><a href="https://github.com/ryandobson/codechest" class="btn-primary-c">View on GitHub</a></p>
@@ -199,14 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="section-intro">
 <p>The package currently exports around ninety functions. They fall into a few groups, most of which grew out of a specific analysis that I did not want to write twice.</p>
 </div>
-<div class="card-grid">
-<section id="anova-workflows" class="level3 c-card">
-<h3 data-anchor-id="anova-workflows">ANOVA workflows</h3>
-<p>Assumption checks that interpret themselves, means tables, plots, a multiverse of analysis specifications, and write-ups.</p>
-<div class="tags">
-<p><span class="tag">anova_check()</span> <span class="tag">anova_workup()</span> <span class="tag">anova_multi()</span></p>
-</div>
-</section>
+<div class="card-grid grid-2">
 <section id="multilevel-models" class="level3 c-card">
 <h3 data-anchor-id="multilevel-models">Multilevel models</h3>
 <p>Within- and between-group decomposition, stepwise random-effects comparison, formula construction, and fixed-effect trimming.</p>
@@ -233,13 +226,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Model tables and reports formatted for APA style, with helpers to write them straight out to Word.</p>
 <div class="tags">
 <p><span class="tag">apa_lmer_model()</span> <span class="tag">apa_mlm_report()</span> <span class="tag">format_p()</span></p>
-</div>
-</section>
-<section id="plotting-and-utilities" class="level3 c-card">
-<h3 data-anchor-id="plotting-and-utilities">Plotting and utilities</h3>
-<p>ggplot themes and palettes, quick distribution checks, and variable labels that survive subsetting.</p>
-<div class="tags">
-<p><span class="tag">dynamic_histogram()</span> <span class="tag">set_var_labels()</span> <span class="tag">gline_theme()</span></p>
 </div>
 </section>
 </div>
@@ -290,20 +276,17 @@ rec_aos_5 (8)       0.01  0.05 0.24  0.32 0.33 0.47 0.57 1.00</code></pre>
 <section id="pub_cors_by" class="level3">
 <h3 data-anchor-id="pub_cors_by">pub_cors_by()</h3>
 <p><code>pub_cors_by()</code> is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.</p>
-<p>I have updates to this function that I haven’t incorporated into my package yet which includes:</p>
-<ul>
-<li><p>automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)</p></li>
-<li><p>easier argument specification so as automatically specify group levels based on the grouping variable provided</p></li>
-</ul>
+<p>It also prints the difference between the two groups’ correlations, which is a quick way to spot interaction effects. The group levels are read off the grouping variable, so you no longer have to name them yourself, and the grouping variable can be passed bare or as a string.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pub_cors_by</span>(<span class="at">data        =</span> ll, <span class="co">#dataset</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">cor_vars    =</span> ll_aos,  <span class="co">#vector of variabl names from the dataset to include in analysis</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">group_var   =</span> <span class="st">"sex_bio"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">groups      =</span> <span class="fu">levels</span>(ll<span class="sc">$</span>sex_bio),</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">rename_vec  =</span> nice_names, <span class="co">#named vector to map new variable names</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">cor_use     =</span> <span class="st">"pairwise"</span>, <span class="co">#defaults to "pairwise" deletion of cases</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">rnd         =</span> <span class="dv">2</span> <span class="co">#default rounds to 2</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>             )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>cors_by_sex <span class="ot">&lt;-</span> <span class="fu">pub_cors_by</span>(<span class="at">data       =</span> ll, <span class="co">#dataset</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">cor_vars   =</span> ll_aos,  <span class="co">#vector of variable names from the dataset to include in analysis</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">group_var  =</span> sex_bio, <span class="co">#levels are picked up automatically</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">rename_vec =</span> nice_names, <span class="co">#named vector to map new variable names</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">cor_use    =</span> <span class="st">"pairwise"</span>, <span class="co">#defaults to "pairwise" deletion of cases</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                           <span class="at">rnd        =</span> <span class="dv">2</span> <span class="co">#default rounds to 2</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                           )</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>cors_by_sex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                       1    2    3    4    5    6    7    8
 oral sex (1)        1.00 0.73 0.32 0.13 0.12 0.18 0.16 0.07
@@ -330,6 +313,19 @@ rec_aos_4 (7)        0.08 0.15  0.08 0.08 0.04 -0.04  0.00 -0.06
 rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 </div>
 </div>
+<p>The largest group differences are ranked and attached to the result, so you don’t have to hunt for them in the matrix.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(cors_by_sex, <span class="st">"group_diff"</span>)<span class="sc">$</span>top_diff <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           var1         var2 Male Female  diff
+17 rec_aos_pt_2    rec_aos_4 0.18   0.02  0.15
+14    rec_aos_1    rec_aos_3 0.37   0.24  0.13
+1  rec_aos_pt_1 rec_aos_pt_2 0.73   0.64  0.09
+24 rec_aos_pt_3    rec_aos_5 0.17   0.26 -0.09
+10    rec_aos_1    rec_aos_2 0.44   0.36  0.08
+16 rec_aos_pt_1    rec_aos_4 0.16   0.08  0.08</code></pre>
+</div>
+</div>
 </section>
 </div>
 <section id="scale_reliabilities" class="level3 function-card">
@@ -337,19 +333,19 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 <p><code>scale_reliabilities()</code> computes reliability for several scales in one call, and <code>tidy_scale_reliabilities()</code> collapses the result into a single table you can drop straight into a manuscript.</p>
 <p>Rather than just Cronbach’s alpha, it also reports omega total and a unidimensionality index, which is useful when you want to know whether treating a set of items as one score is defensible in the first place.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull the item sets for four of the love languages (reception format)</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>grab <span class="ot">&lt;-</span> <span class="cf">function</span>(pattern) <span class="fu">grep</span>(pattern, <span class="fu">names</span>(ll), <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>love_language_scales <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Words of affirmation"</span> <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_woa_[0-9]+$"</span>),</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Quality time"</span>         <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_qt_[0-9]+$"</span>),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Physical touch"</span>       <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_pt_[0-9]+$"</span>),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Gifts"</span>                <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_g_[0-9]+$"</span>)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>rel <span class="ot">&lt;-</span> <span class="fu">scale_reliabilities</span>(ll, <span class="at">scales =</span> love_language_scales)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy_scale_reliabilities</span>(rel, <span class="at">rnd =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull the item sets for four of the love languages (reception format)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>grab <span class="ot">&lt;-</span> <span class="cf">function</span>(pattern) <span class="fu">grep</span>(pattern, <span class="fu">names</span>(ll), <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>love_language_scales <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Words of affirmation"</span> <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_woa_[0-9]+$"</span>),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Quality time"</span>         <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_qt_[0-9]+$"</span>),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Physical touch"</span>       <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_pt_[0-9]+$"</span>),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Gifts"</span>                <span class="ot">=</span> <span class="fu">grab</span>(<span class="st">"^rec_g_[0-9]+$"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>rel <span class="ot">&lt;-</span> <span class="fu">scale_reliabilities</span>(ll, <span class="at">scales =</span> love_language_scales)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy_scale_reliabilities</span>(rel, <span class="at">rnd =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 scale   group    u alpha omega_tot
 1 Words of affirmation overall 0.95  0.80      0.81
@@ -360,12 +356,12 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 </div>
 <p>Passing a <code>group</code> argument returns the same table split by group, which makes it easy to check that a scale behaves similarly for everyone before you compare means across groups.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rel_by_sex <span class="ot">&lt;-</span> <span class="fu">scale_reliabilities</span>(ll,</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">scales =</span> love_language_scales,</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">group  =</span> <span class="st">"sex_bio"</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">groups =</span> <span class="fu">levels</span>(ll<span class="sc">$</span>sex_bio))</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy_scale_reliabilities</span>(rel_by_sex, <span class="at">rnd =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>rel_by_sex <span class="ot">&lt;-</span> <span class="fu">scale_reliabilities</span>(ll,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">scales =</span> love_language_scales,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">group  =</span> <span class="st">"sex_bio"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">groups =</span> <span class="fu">levels</span>(ll<span class="sc">$</span>sex_bio))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy_scale_reliabilities</span>(rel_by_sex, <span class="at">rnd =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 scale  group    u alpha omega_tot
 1 Words of affirmation   Male 0.94  0.81      0.81
@@ -383,20 +379,20 @@ rec_aos_5 (8)       -0.01 0.05 -0.09 0.03 0.07 -0.04 -0.06  0.00</code></pre>
 <h3 data-anchor-id="mlm_groupmean">mlm_groupmean()</h3>
 <p><code>mlm_groupmean()</code> is a function that helps to easily decompose variables into within- and between-group variance. This is a really handy function if you do any multilevel model analyses.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ll2 <span class="ot">&lt;-</span> ll <span class="sc">|&gt;</span> <span class="fu">pivot_longer</span>(<span class="at">cols      =</span> <span class="fu">c</span>(rec_g_1, ex_g_1),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">names_to  =</span> <span class="st">"love_form"</span>,</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">values_to =</span> <span class="st">"gift_1"</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mlm_groupmean</span>(ll2,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">variables     =</span> <span class="st">"gift_1"</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">group         =</span> <span class="st">"pid"</span>,</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">within_affix  =</span> <span class="st">"within_person_"</span>,</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">between_affix =</span> <span class="st">"between_person_"</span>,</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">affix_type    =</span> <span class="st">"prefix"</span>, <span class="co">#add a prefix. 'suffix' is the other option</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">include_z     =</span> <span class="cn">TRUE</span> <span class="co">#includes Z-scored versions of the variables</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>              ) <span class="sc">|&gt;</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"pid|gift_1|within_|between_"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pid) <span class="sc">|&gt;</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ll2 <span class="ot">&lt;-</span> ll <span class="sc">|&gt;</span> <span class="fu">pivot_longer</span>(<span class="at">cols      =</span> <span class="fu">c</span>(rec_g_1, ex_g_1),</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">names_to  =</span> <span class="st">"love_form"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">values_to =</span> <span class="st">"gift_1"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mlm_groupmean</span>(ll2,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">variables     =</span> <span class="st">"gift_1"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">group         =</span> <span class="st">"pid"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">within_affix  =</span> <span class="st">"within_person_"</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">between_affix =</span> <span class="st">"between_person_"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">affix_type    =</span> <span class="st">"prefix"</span>, <span class="co">#add a prefix. 'suffix' is the other option</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">include_z     =</span> <span class="cn">TRUE</span> <span class="co">#includes Z-scored versions of the variables</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>              ) <span class="sc">|&gt;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"pid|gift_1|within_|between_"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pid) <span class="sc">|&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 6
     pid gift_1 between_person_gift_1 within_person_gift_1 Zbetween_person_gift_1

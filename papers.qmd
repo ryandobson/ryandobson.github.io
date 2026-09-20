@@ -546,7 +546,7 @@ Work I have presented at conferences that has not been written up as a
 manuscript. Happy to share data or discuss any of it.
 :::
 
-::: {.card-grid}
+::: {.card-grid .grid-2}
 
 ::: {.c-card}
 [Talk · NEEPS 2025]{.c-card-num}

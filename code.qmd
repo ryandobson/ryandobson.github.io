@@ -1,6 +1,6 @@
 ---
 pagetitle: "Code"
-description-meta: "codechest — an R package of reusable functions for ANOVA workflows, multilevel models, correlations, factor analysis, reliability, and APA reporting, by Ryan T. Dobson."
+description-meta: "codechest — an R package of reusable functions for multilevel models, correlation tables, factor analysis, scale reliability, and APA reporting, by Ryan T. Dobson."
 page-layout: custom
 toc: false
 ---
@@ -12,9 +12,8 @@ toc: false
 ## codechest {.section-title}
 
 ::: {.section-intro}
-An R package of reusable functions for ANOVA workflows, multilevel models,
-correlation tables, factor analysis, scale reliability, and APA-formatted
-reporting.
+An R package of reusable functions for multilevel models, correlation tables,
+factor analysis, scale reliability, and APA-formatted reporting.
 :::
 
 ::: {.btn-row}
@@ -72,20 +71,7 @@ groups, most of which grew out of a specific analysis that I did not want to
 write twice.
 :::
 
-::: {.card-grid}
-
-::: {.c-card}
-### ANOVA workflows
-
-Assumption checks that interpret themselves, means tables, plots, a
-multiverse of analysis specifications, and write-ups.
-
-::: {.tags}
-[anova_check()]{.tag}
-[anova_workup()]{.tag}
-[anova_multi()]{.tag}
-:::
-:::
+::: {.card-grid .grid-2}
 
 ::: {.c-card}
 ### Multilevel models
@@ -139,19 +125,6 @@ straight out to Word.
 :::
 :::
 
-::: {.c-card}
-### Plotting and utilities
-
-ggplot themes and palettes, quick distribution checks, and variable labels
-that survive subsetting.
-
-::: {.tags}
-[dynamic_histogram()]{.tag}
-[set_var_labels()]{.tag}
-[gline_theme()]{.tag}
-:::
-:::
-
 :::
 :::
 :::
@@ -201,24 +174,25 @@ pub_cors_all(data       = ll, #dataset
 
 `pub_cors_by()` is an extension of pub_cors_all() that takes a dichotomous grouping variable and displays correlations for one group above the diagonal, and the other below.
 
-I have updates to this function that I haven't incorporated into my package yet which includes:
-
-- automatic calculation of the difference between grouping variable calculations (helps quickly identify interaction effects in correlations)
-
-- easier argument specification so as automatically specify group levels based on the grouping variable provided
-
+It also prints the difference between the two groups' correlations, which is a quick way to spot interaction effects. The group levels are read off the grouping variable, so you no longer have to name them yourself, and the grouping variable can be passed bare or as a string.
 
 
 ```{r}
-pub_cors_by(data        = ll, #dataset
-            cor_vars    = ll_aos,  #vector of variabl names from the dataset to include in analysis
-            group_var   = "sex_bio",
-            groups      = levels(ll$sex_bio),
-            rename_vec  = nice_names, #named vector to map new variable names
-            cor_use     = "pairwise", #defaults to "pairwise" deletion of cases
-            rnd         = 2 #default rounds to 2
-             )
+cors_by_sex <- pub_cors_by(data       = ll, #dataset
+                           cor_vars   = ll_aos,  #vector of variable names from the dataset to include in analysis
+                           group_var  = sex_bio, #levels are picked up automatically
+                           rename_vec = nice_names, #named vector to map new variable names
+                           cor_use    = "pairwise", #defaults to "pairwise" deletion of cases
+                           rnd        = 2 #default rounds to 2
+                           )
 
+cors_by_sex
+```
+
+The largest group differences are ranked and attached to the result, so you don't have to hunt for them in the matrix.
+
+```{r}
+attr(cors_by_sex, "group_diff")$top_diff |> head()
 ```
 
 :::

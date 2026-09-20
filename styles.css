@@ -360,6 +360,12 @@ section.section-title { font-size: inherit; }
   gap: 1.5rem;
 }
 
+/* Four cards in an auto-fit grid strand one on its own row at desktop
+   widths. This pins them to a 2x2 instead. */
+@media (min-width: 720px) {
+  .card-grid.grid-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
 .c-card {
   background: var(--surface);
   border: 1px solid var(--line);
